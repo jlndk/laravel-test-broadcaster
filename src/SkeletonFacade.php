@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Jlndk\FakeBroadcaster;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Spatie\Skeleton\SkeletonClass
+ * @see \Jlndk\FakeBroadcaster\SkeletonClass
  */
 class SkeletonFacade extends Facade
 {

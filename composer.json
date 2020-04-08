@@ -1,17 +1,19 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "jlndk/laravel-fake-broadcaster",
+    "description": "A broadcast provider for testing event broadcasting",
     "keywords": [
-        "spatie",
-        ":package_name"
+        "laravel",
+        "broadcasting",
+        "testing",
+        "events"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/jlndk/laravel-fake-broadcaster",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
+            "name": "Jonas Lindenskov Nielsen",
+            "email": "hi@lindenskov.dev",
+            "homepage": "https://lindenskov.dev",
             "role": "Developer"
         }
     ],
@@ -20,18 +22,18 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
-        "symfony/var-dumper": "^4.3",
+        "symfony/var-dumper": "^5.0",
         "orchestra/testbench": "^5.0",
         "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Jlndk\\FakeBroadcaster\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Jlndk\\FakeBroadcaster\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,11 +47,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
-            }
+                "Jlndk\\FakeBroadcaster\\FakeBroadcastServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

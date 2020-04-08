@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Jlndk\FakeBroadcaster;
 
 use Illuminate\Support\ServiceProvider;
 

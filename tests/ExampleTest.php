@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Jlndk\FakeBroadcaster\Tests;
 
 use PHPUnit\Framework\TestCase;
 
