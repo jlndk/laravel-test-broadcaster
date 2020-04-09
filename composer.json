@@ -1,5 +1,5 @@
 {
-    "name": "jlndk/laravel-fake-broadcaster",
+    "name": "jlndk/laravel-test-broadcaster",
     "description": "A broadcast provider for testing event broadcasting",
     "keywords": [
         "laravel",
@@ -7,7 +7,7 @@
         "testing",
         "events"
     ],
-    "homepage": "https://github.com/jlndk/laravel-fake-broadcaster",
+    "homepage": "https://github.com/jlndk/laravel-test-broadcaster",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "illuminate/support": "^7.5"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
@@ -28,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jlndk\\FakeBroadcaster\\": "src"
+            "Jlndk\\TestBroadcaster\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jlndk\\FakeBroadcaster\\Tests\\": "tests"
+            "Jlndk\\TestBroadcaster\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,8 +48,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jlndk\\FakeBroadcaster\\FakeBroadcastServiceProvider"
-            ]
+                "Jlndk\\TestBroadcaster\\TestBroadcastServiceProvider"
+            ],
+            "aliases": {
+                "TestBroadcaster": "Jlndk\\TestBroadcaster\\TestBroadcasterFacade"
+            }
         }
     },
     "minimum-stability": "dev",

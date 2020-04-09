@@ -1,8 +1,8 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/jlndk/laravel-fake-broadcaster.svg?style=flat-square)](https://packagist.org/packages/jlndk/laravel-fake-broadcaster)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/jlndk/laravel-fake-broadcaster/run-tests?label=tests)](https://github.com/jlndk/laravel-fake-broadcaster/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/jlndk/laravel-fake-broadcaster.svg?style=flat-square)](https://packagist.org/packages/jlndk/laravel-fake-broadcaster)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/jlndk/laravel-test-broadcaster.svg?style=flat-square)](https://packagist.org/packages/jlndk/laravel-test-broadcaster)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/jlndk/laravel-test-broadcaster/run-tests?label=tests)](https://github.com/jlndk/laravel-test-broadcaster/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/jlndk/laravel-test-broadcaster.svg?style=flat-square)](https://packagist.org/packages/jlndk/laravel-test-broadcaster)
 
 This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
 
@@ -11,7 +11,7 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require jlndk/laravel-fake-broadcaster
+composer require jlndk/laravel-test-broadcaster
 ```
 
 ## Usage
