@@ -6,17 +6,7 @@ use Illuminate\Broadcasting\Broadcasters\Broadcaster;
 
 class TestBroadcaster extends Broadcaster
 {
-    private $broadcasts;
-
-    /**
-     * Create a new broadcaster instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->broadcasts = [];
-    }
+    private array $broadcasts = [];
 
     /**
      * {@inheritdoc}
@@ -42,18 +32,29 @@ class TestBroadcaster extends Broadcaster
     /**
      * {@inheritdoc}
      */
-    public function auth($request)
-    {
-    }
+    public function auth($request){}
 
     /**
      * {@inheritdoc}
      */
-    public function validAuthenticationResponse($request, $result)
-    {
-    }
+    public function validAuthenticationResponse($request, $result){}
 
-    public function contains($event, $channels = null, $count = null, array $payload = null): bool
+    /**
+     * Authenticate the incoming request for a given channel.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return mixed
+     */
+
+    /**
+     * Return if the broadcaster contains event.
+     * 
+     * @param   string  $event
+     * @param   mixed   $channel
+     * 
+     * @return bool
+     */
+    public function contains(string $event, $channels = null, $count = null, array $payload = null): bool
     {
         if (is_integer($channels)) {
             $count = $channels;
@@ -85,16 +86,15 @@ class TestBroadcaster extends Broadcaster
 
     private function broadcastContainsAllChannels(array $broadcast, $channels): bool
     {
-        if (is_array($channels)) {
-            foreach ($channels as $channel) {
-                if (!$this->broadcastContainsChannel($broadcast, $channel)) {
-                    return false;
-                }
+        if (!is_array($channels)) {
+            return $this->broadcastContainsChannel($broadcast, $channels);
+        } 
+        
+        foreach ($channels as $channel) {
+            if (!$this->broadcastContainsChannel($broadcast, $channel)) {
+                return false;
             }
-        } else if (!$this->broadcastContainsChannel($broadcast, $channels)) {
-            return false;
         }
-
         return true;
     }
 
