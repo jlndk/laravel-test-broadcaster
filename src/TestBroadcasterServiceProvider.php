@@ -2,8 +2,8 @@
 
 namespace Jlndk\TestBroadcaster;
 
-use Illuminate\Foundation\Application;
 use Illuminate\Broadcasting\BroadcastManager;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
 class TestBroadcasterServiceProvider extends ServiceProvider
