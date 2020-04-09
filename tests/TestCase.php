@@ -33,5 +33,5 @@ class TestCase extends BaseTestCase
     {
         $app['config']->set('broadcasting.default', 'test');
         $app['config']->set('broadcasting.connections.test', ['driver' => 'test']);
-    }   
+    }
 }

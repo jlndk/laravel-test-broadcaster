@@ -13,7 +13,7 @@ class TestBroadcaster extends Broadcaster
      */
     public function broadcast(array $channels, $event, array $payload = [])
     {
-        if (!array_key_exists($event, $this->broadcasts)) {
+        if (! array_key_exists($event, $this->broadcasts)) {
             $this->broadcasts[$event] = collect([]);
         }
 
@@ -61,7 +61,7 @@ class TestBroadcaster extends Broadcaster
             $channels = null;
         }
 
-        if (!array_key_exists($event, $this->broadcasts)) {
+        if (! array_key_exists($event, $this->broadcasts)) {
             return false;
         }
 
@@ -74,7 +74,7 @@ class TestBroadcaster extends Broadcaster
         if ($channels != null) {
             $last = $eventBroadcasts->last();
 
-            if (!$this->broadcastContainsAllChannels($last, $channels)) {
+            if (! $this->broadcastContainsAllChannels($last, $channels)) {
                 return false;
             }
         }

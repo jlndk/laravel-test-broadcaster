@@ -5,7 +5,7 @@ namespace Jlndk\TestBroadcaster\Tests;
 use PHPUnit\Framework\ExpectationFailedException;
 
 class CanTestBroadcastingTest extends TestCase
-{ 
+{
     /**
      * @test
      */
