@@ -32,12 +32,16 @@ class TestBroadcaster extends Broadcaster
     /**
      * {@inheritdoc}
      */
-    public function auth($request){}
+    public function auth($request)
+    {
+    }
 
     /**
      * {@inheritdoc}
      */
-    public function validAuthenticationResponse($request, $result){}
+    public function validAuthenticationResponse($request, $result)
+    {
+    }
 
     /**
      * Authenticate the incoming request for a given channel.
@@ -48,10 +52,10 @@ class TestBroadcaster extends Broadcaster
 
     /**
      * Return if the broadcaster contains event.
-     * 
+     *
      * @param   string  $event
      * @param   mixed   $channel
-     * 
+     *
      * @return bool
      */
     public function contains(string $event, $channels = null, $count = null, array $payload = null): bool
@@ -86,15 +90,16 @@ class TestBroadcaster extends Broadcaster
 
     private function broadcastContainsAllChannels(array $broadcast, $channels): bool
     {
-        if (!is_array($channels)) {
+        if (! is_array($channels)) {
             return $this->broadcastContainsChannel($broadcast, $channels);
-        } 
+        }
         
         foreach ($channels as $channel) {
-            if (!$this->broadcastContainsChannel($broadcast, $channel)) {
+            if (! $this->broadcastContainsChannel($broadcast, $channel)) {
                 return false;
             }
         }
+
         return true;
     }
 
